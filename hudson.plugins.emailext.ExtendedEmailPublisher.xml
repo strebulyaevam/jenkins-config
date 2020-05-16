@@ -1,0 +1,45 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.69">
+  <mailAccount>
+    <smtpHost>smtp.gmail.com</smtpHost>
+    <smtpPort>465</smtpPort>
+    <smtpUsername>mstrebulyaeva@gmail.com</smtpUsername>
+    <smtpPassword>{AQAAABAAAAAQAMx9hQJcIjrE+yX3YVVOeVDemtL3Q+Emrcx3lNI8Sis=}</smtpPassword>
+    <useSsl>true</useSsl>
+  </mailAccount>
+  <addAccounts/>
+  <charset>UTF-8</charset>
+  <defaultContentType>text/plain</defaultContentType>
+  <defaultSubject>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</defaultSubject>
+  <defaultBody>Tests Results&#xd;
+Testname: $PROJECT_NAME&#xd;
+Build: $BUILD_NUMBER&#xd;
+Status: $BUILD_STATUS&#xd;
+Branch: $GIT_BRANCH&#xd;
+Faild tests: ${FAILED_TESTS, showStack=false}&#xd;
+Total tests:  ${TEST_COUNTS,var=&quot;total&quot;} &#xd;
+Faild tests:  ${TEST_COUNTS,var=&quot;fail&quot;}&#xd;
+Pass tests: ${TEST_COUNTS,var=&quot;pass&quot;}&#xd;
+Skip tests: ${TEST_COUNTS,var=&quot;skip&quot;}&#xd;
+Duration: ${currentBuild.durationString}&#xd;
+&#xd;
+Check console output a t $BUILD_URL to view the results .</defaultBody>
+  <defaultPresendScript></defaultPresendScript>
+  <defaultPostsendScript></defaultPostsendScript>
+  <defaultClasspath/>
+  <defaultTriggerIds>
+    <string>hudson.plugins.emailext.plugins.trigger.AlwaysTrigger</string>
+    <string>hudson.plugins.emailext.plugins.trigger.FailureTrigger</string>
+  </defaultTriggerIds>
+  <maxAttachmentSize>-1</maxAttachmentSize>
+  <recipientList>mstrebulyaeva@gmail.com</recipientList>
+  <defaultReplyTo></defaultReplyTo>
+  <allowedDomains></allowedDomains>
+  <excludedCommitters></excludedCommitters>
+  <overrideGlobalSettings>true</overrideGlobalSettings>
+  <precedenceBulk>false</precedenceBulk>
+  <debugMode>false</debugMode>
+  <requireAdminForTemplateTesting>false</requireAdminForTemplateTesting>
+  <enableWatching>false</enableWatching>
+  <enableAllowUnregistered>false</enableAllowUnregistered>
+</hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>

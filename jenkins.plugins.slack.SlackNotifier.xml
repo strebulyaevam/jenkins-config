@@ -1,0 +1,11 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.slack.SlackNotifier_-DescriptorImpl plugin="slack@2.40">
+  <baseUrl></baseUrl>
+  <teamDomain>otus-qa</teamDomain>
+  <tokenCredentialId>d93a9369-93b6-4b12-8240-406d157b8b08</tokenCredentialId>
+  <botUser>false</botUser>
+  <sendAsText>false</sendAsText>
+  <iconEmoji></iconEmoji>
+  <username></username>
+  <room>#jenkins-rep</room>
+</jenkins.plugins.slack.SlackNotifier_-DescriptorImpl>
